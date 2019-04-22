@@ -17,19 +17,21 @@
         width: 90%;
         display: block;   
         transition: all .3s;
-        
-            &::-webkit-input-placeholder {
-                color: $color-grey-dark-2;
-            }
+        @include response(tab-port) {
+            width: 100%;
+        }
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark-2;
+        }
 
-            &:focus {
-                outline: none;
-                box-shadow: 0 1rem 2rem rgba($color-black, .1);//accessibility reason
-                border-bottom: 3px solid $color-primary;
-            }
-            &:focus:invalid {
-                border: 3px solid $color-secondary-dark;
-            }
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);//accessibility reason
+            border-bottom: 3px solid $color-primary;
+        }
+        &:focus:invalid {
+            border: 3px solid $color-secondary-dark;
+        }
     }
 
     &__label {
@@ -50,6 +52,11 @@
     &__radio-group {
         width: 49%;//for horizontal place reason
         display: inline-block;
+
+        @include response(tab-port) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
     }
 
     &__radio-label {

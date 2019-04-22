@@ -12,3 +12,40 @@
     left:50%;
     transform: translate(-50%, -50%);
 }
+
+//Media query manager.
+/**
+ 0-600px: phone
+ 600- 900px: Tablet portrait.
+ 900-1200px: Tablet landscape;
+ 1200-1800: normal style(Desktop first approach)
+ 1800px +; Big Desktop
+
+ $brakpoint agument choices.
+ -phone
+ -tab-port
+ -tab-land
+ -big-desktop
+
+ Orderr: base + typography + general layout + grid >page layout > component
+
+*/
+
+//Note:changing root font-size doesnot effect the font-size inside mixins. 
+@mixin  respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em){@content}; //600/16 = 37.5em
+    }
+
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) {@content};//900
+    }
+
+    @if $breakpoint == tab-land {//1200
+        @media (max-width: 75em) {@content};
+    }
+
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) {@content};
+    }
+}
