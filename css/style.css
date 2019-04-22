@@ -679,7 +679,7 @@ body {
 .navigation__button:hover .navigation__icon::before {
   top: -1rem; }
 
-.navigation__button .navigation__icon::after {
+.navigation__button:hover .navigation__icon::after {
   top: 1rem; }
 
 .navigation__checkbox:checked + .navigation__button .navigation__icon {
