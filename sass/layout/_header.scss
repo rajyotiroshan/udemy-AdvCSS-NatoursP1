@@ -17,9 +17,9 @@
       height: 95vh;
     }
 
-    @media (min-resolution: 192dpi) and (min-width: 37.5em),//or
-            (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),//or
-            (min-width: 125em) {//higher resolution 2000px/16
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),//or
+    only screen and  (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),//or
+    only screen and  (min-width: 125em) {//higher resolution 2000px/16
               background-image: linear-gradient(
                 to right bottom,
                 rgba($color-primary-light, 0.8),

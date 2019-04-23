@@ -34,18 +34,18 @@
 //Note:changing root font-size doesnot effect the font-size inside mixins. 
 @mixin  respond($breakpoint) {
     @if $breakpoint == phone {
-        @media (max-width: 37.5em){@content}; //600/16 = 37.5em
+        @media only screen and (max-width: 37.5em){@content}; //600/16 = 37.5em
     }
 
     @if $breakpoint == tab-port {
-        @media (max-width: 56.25em) {@content};//900
+        @media only screen and (max-width: 56.25em) {@content};//900
     }
 
     @if $breakpoint == tab-land {//1200
-        @media (max-width: 75em) {@content};
+        @media only screen and  (max-width: 75em) {@content};
     }
 
     @if $breakpoint == big-desktop {
-        @media (min-width: 112.5em) {@content};
+        @media only screen and  (min-width: 112.5em) {@content};
     }
 }
